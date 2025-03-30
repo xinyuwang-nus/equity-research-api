@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "4a9ec6ba-11d2-42f5-8df7-c122dae75f4a",
+		"name": "AIDF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18568041"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"user1\",\n  \"password\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"user1\",\n  \"password\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create report",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2U5MjJhZWVjZGE3OTgyMDU4YzUzNDUiLCJpYXQiOjE3NDMzMzI4NTIsImV4cCI6MTc0MzMzNjQ1Mn0.lIT5WkxVOL9aZSB6he3OjsdV8bqjVxvaBEjEkFgt1ic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ticker\": \"AAL\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user reports",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2U5NTU5YmNiN2I0ZTg3MjU5ODI4ZWIiLCJ1c2VyTmFtZSI6InVzZXIxIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDMzNTIwNDcsImV4cCI6MTc0MzM1NTY0N30.bMW8KwhnkU79A8PJpSM8uEInM82WZu7MhTKeuwhl99A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2U5NTU5YmNiN2I0ZTg3MjU5ODI4ZWIiLCJ1c2VyTmFtZSI6InVzZXIxIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDMzNDYzNDAsImV4cCI6MTc0MzM0OTk0MH0.TeDEZpOrSeFjaIDT65S6X8tc-g6Pan6MapNGAnnpqJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports/67e95d6c4782f823e0b6c740",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"67e95d6c4782f823e0b6c740"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete report by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2U5NTU5YmNiN2I0ZTg3MjU5ODI4ZWIiLCJ1c2VyTmFtZSI6InVzZXIxIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDMzNDUwODQsImV4cCI6MTc0MzM0ODY4NH0.q9_xg22wJidu4OXtjDMUAfCV3Z-MwVpnohUCxe079tM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports/67e956a6f74c6d225a00abf6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"67e956a6f74c6d225a00abf6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all reports (admin)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2U5NTU5YmNiN2I0ZTg3MjU5ODI4ZWIiLCJ1c2VyTmFtZSI6InVzZXIxIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDMzNDU2OTAsImV4cCI6MTc0MzM0OTI5MH0.WFs208kO9hPe3YfmtBEPDxe2qZINdRk85dENj62muek",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports/admin/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"admin",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export report text",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2U5NTU5YmNiN2I0ZTg3MjU5ODI4ZWIiLCJ1c2VyTmFtZSI6InVzZXIxIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDMzNDYzNDAsImV4cCI6MTc0MzM0OTk0MH0.TeDEZpOrSeFjaIDT65S6X8tc-g6Pan6MapNGAnnpqJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports/67e95873f74c6d225a00ac0e/export-text",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"67e95873f74c6d225a00ac0e",
+						"export-text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export report pdf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2U5NTU5YmNiN2I0ZTg3MjU5ODI4ZWIiLCJ1c2VyTmFtZSI6InVzZXIxIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDMzNDYzNDAsImV4cCI6MTc0MzM0OTk0MH0.TeDEZpOrSeFjaIDT65S6X8tc-g6Pan6MapNGAnnpqJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports/67e95873f74c6d225a00ac0e/export-pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"67e95873f74c6d225a00ac0e",
+						"export-pdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
