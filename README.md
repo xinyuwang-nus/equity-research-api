@@ -3,6 +3,8 @@
 
 This project provides an authenticated backend API for generating and managing equity research reports using financial data, real-time stock data (Yahoo Finance), and LLMs (Anthropic Claude).
 
+🌐 Live API: http://54.211.30.146:3000 (hosted on AWS EC2)
+
 ---
 ## 🏗️ Project Structure
 
@@ -116,11 +118,11 @@ Authorization: Bearer <your_token_here>
 - **bcrypt** – Hashing library for storing encrypted passwords.
 - **Anthropic Claude API** 
   - Endpoint: `https://api.anthropic.com/v1/messages`
-  - Model: `claude-3-haiku-20240307`
+  - Model: `claude-3-5-haiku-20241022`
   - Requires API Key
 - **Yahoo Finance** – Fetches real-time stock data like price, market cap, P/E ratio.
 - **pdfkit** – Generates downloadable PDF versions of reports.
-- **AWS EC2** (Free-tier compatible)
+- **AWS EC2** - Hosting the backend API
 
 ---
 
